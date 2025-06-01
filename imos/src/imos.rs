@@ -15,7 +15,7 @@ impl Imos {
     }
 
     pub fn query(&mut self, (start,end,val): (usize,usize,isize)) {
-        if 0 < start && start < self.size {
+        if 0 < start && start < self.size+1 {
             self.array[start.saturating_sub(1)] += val;
         }
         if end < self.size {
