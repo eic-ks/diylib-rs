@@ -1,3 +1,3 @@
 mod imos;
 
-pub use Imos;
+pub use crate::imos::Imos;
