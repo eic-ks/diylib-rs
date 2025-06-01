@@ -6,10 +6,15 @@ pub use crate::imos::Imos;
 mod tests {
     #[test]
     fn test_imos() {
-        let test_query = (2,5,3);
+        let mut test_querys = vec![];
+        test_querys.push((1,6,1));
+        test_querys.push((4,5,1));
+        test_querys.push((5,10,1));
+        test_querys.push((7,10,1));
         let mut ims = crate::Imos::new(10);
-        ims.query(test_query);
-        ims.result();
-        println!("{:?}",ims.array());
+        for i in 0..test_querys.len() {
+            ims.query(test_querys[i]);
+        }
+        println!("{:?}",ims.result());
     }
 }

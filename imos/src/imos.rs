@@ -14,23 +14,20 @@ impl Imos {
         }
     }
 
-    pub fn array(&self) -> &[isize] {
-        &self.array
-    }
-
     pub fn query(&mut self, (start,end,val): (usize,usize,isize)) {
-        if 1 < start && start < self.size {
+        if 0 < start && start < self.size {
             self.array[start.saturating_sub(1)] += val;
         }
-        if end+1 < self.size {
+        if end < self.size {
             self.array[end] -= val;
         }
     }
 
-    pub fn result(&mut self) {
+    pub fn result(&mut self) -> &[isize] {
         for i in 1..self.size {
             self.array[i] += self.array[i-1];
         }
+        &self.array
     }
 
 }
