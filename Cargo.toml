@@ -1,5 +1,7 @@
+# 各クレートのパッケージ名を書くのではなくクレートのパス（今回はディレクトリ名でok）を書く
 [workspace]
 members = [
     "test",
     "imos",
+    "encode",
 ]
