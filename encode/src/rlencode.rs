@@ -26,6 +26,16 @@ impl RLE {
         }
         result
     }
+    pub fn decode(data: &[(char,usize)]) -> String {
+        let mut result = String::new();
+
+        for &(c,num) in data.iter() {
+            for _ in 0..num {
+                result.push(c);
+            }
+        }
+        result
+    }
 }
 
 
