@@ -1,11 +1,11 @@
 // mutableでインスタンス作成する必要あり
 #[derive(Debug)]
-pub struct Imos {
+pub struct Ims {
     array: Vec<isize>,
     size: usize,
 }
 
-impl Imos {
+impl Ims {
 
     pub fn new(size: usize) -> Self {
         Self {
